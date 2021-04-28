@@ -9,7 +9,7 @@ use \Monolog\Logger as MonologLogger;
 
 class Logger
 {
-    private MonologLogger $logger;
+    private $logger;
 
     public function __construct(\Monolog\LoggerFactory $loggerFactory)
     {

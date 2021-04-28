@@ -19,17 +19,17 @@ class LogCommand extends Command
     /**
      * @var Reader $configReader
      */
-    private Reader $configReader;
+    private $configReader;
 
     /**
      * @var File $fileAdapter
      */
-    private File $fileAdapter;
+    private $fileAdapter;
 
     /**
      * @var ArrayUtils $arrayUtils
      */
-    private ArrayUtils $arrayUtils;
+    private $arrayUtils;
 
     /**
      * LogCommand constructor.

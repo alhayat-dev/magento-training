@@ -4,22 +4,26 @@ declare(strict_types=1);
 
 namespace Training\ConsoleExample\Service;
 
-
 use Magento\Catalog\Model\ProductRepository;
 use Training\ConsoleExample\Model\ProductKey;
 
 class Example
 {
     /**
-     * @var ProductRepository
+     * @var ProductRepository $productRepository
      */
-    protected ProductRepository $productRepository;
+    protected $productRepository;
 
     /**
-     * @var ProductKey
+     * @var ProductKey $productKey
      */
-    protected ProductKey $productKey;
+    protected $productKey;
 
+    /**
+     * Example constructor.
+     * @param ProductRepository $productRepository
+     * @param ProductKey $productKey
+     */
     public function __construct(
         ProductRepository $productRepository,
         ProductKey $productKey
@@ -28,7 +32,13 @@ class Example
         $this->productKey = $productKey;
     }
 
-    public function getProductKey(int $productId, string $productPrefix): string
+    /**
+     * @param int $productId
+     * @param string $productPrefix
+     * @return string
+     * @throws \Magento\Framework\Exception\NoSuchEntityException
+     */
+    public function getProductKey(int $productId, string $productPrefix)
     {
         $product = $this->productRepository->getById($productId);
         return $this->productKey->getKey($product, $productPrefix);

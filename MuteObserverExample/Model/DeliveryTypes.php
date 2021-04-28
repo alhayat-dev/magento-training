@@ -12,7 +12,7 @@ class DeliveryTypes
     /**
      * @var ManagerInterface
      */
-    protected ManagerInterface $eventManager;
+    protected $eventManager;
 
     /**
      * DeliveryTypes constructor.

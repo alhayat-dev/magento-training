@@ -6,7 +6,7 @@ namespace Training\Interfaces\Api\Data;
 
 interface SupplierInterface
 {
-    public function setCode($code): void;
+    public function setCode($code);
 
-    public function getCode(): string;
+    public function getCode();
 }

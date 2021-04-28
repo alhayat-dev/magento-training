@@ -13,7 +13,7 @@ class Example implements ArgumentInterface
     /**
      * @var CodeValidationPool $codeValidationPool
      */
-    protected CodeValidationPool $codeValidationPool;
+    protected $codeValidationPool;
 
     public function __construct(CodeValidationPool $codeValidationPool)
     {

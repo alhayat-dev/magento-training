@@ -13,19 +13,19 @@ class EventsLogger
     /**
      * @var array
      */
-    private static array $events = [];
+    private static $events = [];
     /**
      * @var Json
      */
-    protected Json $jsonSerializer;
+    protected $jsonSerializer;
     /**
      * @var File
      */
-    protected File $fileAdapter;
+    protected $fileAdapter;
     /**
      * @var DirectoryList
      */
-    protected DirectoryList $directoryList;
+    protected $directoryList;
 
     public function __construct(Json $jsonSerializer, File $fileAdapter, DirectoryList $directoryList)
     {

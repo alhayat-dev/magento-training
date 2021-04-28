@@ -13,7 +13,7 @@ class Index implements ActionInterface
     /**
      * @var PageFactory $pageFactory
      */
-    private PageFactory $pageFactory;
+    private $pageFactory;
 
     public function __construct(
         PageFactory $pageFactory

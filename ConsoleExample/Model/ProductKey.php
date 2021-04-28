@@ -9,7 +9,12 @@ use Magento\Catalog\Api\Data\ProductInterface;
 
 class ProductKey
 {
-    public function getKey(ProductInterface $product, string $prefix): string
+    /**
+     * @param ProductInterface $product
+     * @param string $prefix
+     * @return string
+     */
+    public function getKey(ProductInterface $product, string $prefix)
     {
         return sprintf('%s-%s', $prefix, $product->getSku());
     }

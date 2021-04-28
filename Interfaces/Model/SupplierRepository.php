@@ -30,7 +30,7 @@ class SupplierRepository implements SupplierRepositoryInterface
      * @param $code
      * @return SupplierInterface
      */
-    public function createNew($code): SupplierInterface
+    public function createNew($code)
     {
         $this->codeValidation->validate($code);
         $supplier = $this->supplierFactory->create();

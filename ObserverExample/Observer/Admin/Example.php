@@ -14,7 +14,7 @@ class Example implements ObserverInterface
     /**
      * @var Logger
      */
-    private Logger $logger;
+    private $logger;
 
     public function __construct(Logger $logger)
     {

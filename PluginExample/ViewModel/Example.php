@@ -14,11 +14,11 @@ class Example implements ArgumentInterface
     /**
      * @var ProductRepositoryInterface
      */
-    protected ProductRepositoryInterface $productRepository;
+    protected $productRepository;
     /**
      * @var ProductKey
      */
-    protected ProductKey $productKey;
+    protected $productKey;
 
     public function __construct(
         ProductRepositoryInterface $productRepository,
@@ -28,7 +28,12 @@ class Example implements ArgumentInterface
         $this->productKey = $productKey;
     }
 
-    public function getProductKey(RequestInterface $request): ?string
+    /**
+     * @param RequestInterface $request
+     * @return string|null
+     * @throws \Magento\Framework\Exception\NoSuchEntityException
+     */
+    public function getProductKey(RequestInterface $request)
     {
         $productId = $request->getParam('product_id');
         if (null !== $productId) {

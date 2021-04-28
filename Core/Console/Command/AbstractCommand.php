@@ -13,12 +13,18 @@ abstract class AbstractCommand extends Command
 {
 
     /**
-     * @var ObjectManager
+     * @var ObjectManager $objectManager
      */
-    protected ObjectManagerInterface $objectManager;
+    protected $objectManager;
 
-    protected string $serviceClass;
+    /**
+     * @var string $serviceClass
+     */
+    protected $serviceClass;
 
+    /**
+     * @var $service
+     */
     protected $service;
 
     public function __construct(ObjectManagerInterface $objectManager, string $serviceClass, string $name = null)
@@ -29,16 +35,21 @@ abstract class AbstractCommand extends Command
     }
 
     /**
-     * @var InputInterface
+     * @var InputInterface $input
      */
-    protected InputInterface $input;
+    protected $input;
     /**
-     * @var OutputInterface
+     * @var OutputInterface $output
      */
-    protected OutputInterface $output;
+    protected $output;
 
-    abstract protected function handle(): void;
+    abstract protected function handle();
 
+    /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @return void
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $this->setInput($input);
@@ -46,26 +57,42 @@ abstract class AbstractCommand extends Command
         $this->handle();
     }
 
+    /**
+     * @param InputInterface $input
+     */
     public function setInput(InputInterface $input)
     {
         $this->input = $input;
     }
 
+    /**
+     * @param OutputInterface $output
+     */
     public function setOutput(OutputInterface $output)
     {
         $this->output = $output;
     }
 
-    public function getInput(): InputInterface
+    /**
+     * @return InputInterface
+     */
+    public function getInput()
     {
         return $this->input;
     }
 
-    public function getOutput(): OutputInterface
+    /**
+     * @return OutputInterface
+     */
+    public function getOutput()
     {
         return $this->output;
     }
 
+    /**
+     * @param array $data
+     * @return mixed
+     */
     protected function getService(array $data = [])
     {
         if (null !== $this->service) {
@@ -76,6 +103,10 @@ abstract class AbstractCommand extends Command
         return $this->service;
     }
 
+    /**
+     * @param array $data
+     * @return mixed
+     */
     private function getObject(array $data = [])
     {
         return $this->objectManager->create($this->serviceClass, $data);

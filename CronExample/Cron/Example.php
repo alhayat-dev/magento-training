@@ -11,7 +11,7 @@ class Example
     /**
      * @var LoggerInterface $logger
      */
-    private LoggerInterface $logger;
+    private $logger;
 
     /**
      * Example constructor.
@@ -23,7 +23,7 @@ class Example
         $this->logger = $logger;
     }
 
-    public function execute(): void
+    public function execute()
     {
         $this->logger->info("Starting running cron example");
         sleep(2);

@@ -16,7 +16,7 @@ class Example extends Command
     /**
      * @var Logger
      */
-    protected Logger $logger;
+    protected $logger;
 
     public function __construct(Logger $logger, string $name = null)
     {

@@ -17,7 +17,7 @@ class Index implements ActionInterface
     /**
      * @var PageFactory
      */
-    protected PageFactory $pageFactory;
+    protected $pageFactory;
 
     /**
      * Index constructor.

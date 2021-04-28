@@ -8,5 +8,5 @@ use Training\Interfaces\Api\Data\SupplierInterface;
 
 interface SupplierRepositoryInterface
 {
-    public function createNew($code): SupplierInterface;
+    public function createNew($code);
 }

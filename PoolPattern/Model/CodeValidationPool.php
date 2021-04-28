@@ -7,7 +7,7 @@ class CodeValidationPool
     /**
      * @var array
      */
-    protected array $validations;
+    protected $validations;
 
     /**
      * CodeValidationPool constructor.

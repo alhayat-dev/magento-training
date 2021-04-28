@@ -14,7 +14,7 @@ class Supplier implements SupplierInterface
     /**
      * @param $code
      */
-    public function setCode($code): void
+    public function setCode($code)
     {
         $this->code = $code;
     }
@@ -22,7 +22,7 @@ class Supplier implements SupplierInterface
     /**
      * @return string
      */
-    public function getCode(): string
+    public function getCode()
     {
         return $this->code;
     }

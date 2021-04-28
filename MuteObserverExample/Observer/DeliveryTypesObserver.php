@@ -7,7 +7,7 @@ use Magento\Framework\Event\ObserverInterface;
 
 class DeliveryTypesObserver implements ObserverInterface
 {
-    public static bool $muted = false;
+    public static $muted = false;
 
     public function execute(Observer $observer)
     {

@@ -15,7 +15,7 @@ class CoreDeliveryCommand extends Command
     /**
      * @var DeliveryTypes
      */
-    protected DeliveryTypes $deliveryTypes;
+    protected $deliveryTypes;
 
     /**
      * DeliveryCommand constructor.

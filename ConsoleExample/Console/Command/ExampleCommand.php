@@ -21,7 +21,7 @@ class ExampleCommand extends AbstractCommand
         $this->addArgument('product_prefix', InputArgument::REQUIRED, 'Product Prefix');
     }
 
-    protected function handle(): void
+    protected function handle()
     {
         $productId = $this->getInput()->getArgument('product_id');
         $productPrefix = $this->getInput()->getArgument('product_prefix');

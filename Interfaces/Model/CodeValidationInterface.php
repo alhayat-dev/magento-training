@@ -6,5 +6,5 @@ namespace Training\Interfaces\Model;
 
 interface CodeValidationInterface
 {
-    public function validate($code): void;
+    public function validate($code);
 }

@@ -19,7 +19,7 @@ class Interfaces implements ArgumentInterface
         $this->supplierRepository = $supplierRepository;
     }
 
-    public function getSupplierCode() : string
+    public function getSupplierCode()
     {
         return $this->supplierRepository->createNew("ABC-123")->getCode();
     }
