@@ -20,29 +20,29 @@
         </arguments>
     </type>
 
-    <type name="Monolog\Handler\StreamHandler">
-        <arguments>
-            <argument name="stream" xsi:type="string">php://stdout</argument>
-            <argument name="level" xsi:type="const"> \Monolog\Logger::DEBUG</argument>
-        </arguments>
-    </type>
+<!--    <type name="Monolog\Handler\StreamHandler">-->
+<!--        <arguments>-->
+<!--            <argument name="stream" xsi:type="string">php://stdout</argument>-->
+<!--            <argument name="level" xsi:type="const"> \Monolog\Logger::DEBUG</argument>-->
+<!--        </arguments>-->
+<!--    </type>-->
 
-    <type name="Monolog\Handler\NativeMailerHandler">
-        <arguments>
-            <argument name="to" xsi:type="string">to@receiver.com</argument>
-            <argument name="subject" xsi:type="string">Custom Example Logger</argument>
-            <argument name="from" xsi:type="string">from@sender.com</argument>
-            <argument name="level" xsi:type="const"> \Monolog\Logger::DEBUG</argument>
-        </arguments>
-    </type>
+<!--    <type name="Monolog\Handler\NativeMailerHandler">-->
+<!--        <arguments>-->
+<!--            <argument name="to" xsi:type="string">to@receiver.com</argument>-->
+<!--            <argument name="subject" xsi:type="string">Custom Example Logger</argument>-->
+<!--            <argument name="from" xsi:type="string">from@sender.com</argument>-->
+<!--            <argument name="level" xsi:type="const"> \Monolog\Logger::DEBUG</argument>-->
+<!--        </arguments>-->
+<!--    </type>-->
 
     <type name="Training\LoggerExample\Logger\Logger">
         <arguments>
             <argument name="name" xsi:type="string">loggerExample</argument>
             <argument name="handlers" xsi:type="array">
                 <item name="system" xsi:type="object">Training\LoggerExample\Logger\Handler</item>
-                <item name="stream" xsi:type="object">Monolog\Handler\StreamHandler</item>
-                <item name="mailer" xsi:type="object">Monolog\Handler\NativeMailerHandler</item>
+<!--                <item name="stream" xsi:type="object">Monolog\Handler\StreamHandler</item>-->
+<!--                <item name="mailer" xsi:type="object">Monolog\Handler\NativeMailerHandler</item>-->
             </argument>
         </arguments>
     </type>

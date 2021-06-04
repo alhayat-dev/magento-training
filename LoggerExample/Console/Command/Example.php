@@ -38,17 +38,17 @@ class Example extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        /**
-         *  $streamHandler =  new StreamHandler('', Logger::DEBUG);
-            $this->logger->pushHandler($streamHandler);
-            $mailerHandler = new NativeMailerHandler(
-                'to@receiver.com',
-                'Example Logger',
-                'from@sender.com',
-                Logger::DEBUG
-            );
-            $this->logger->pushHandler($mailerHandler);
-         */
+        /*
+        $streamHandler =  new StreamHandler('', Logger::DEBUG);
+        $this->logger->pushHandler($streamHandler);
+        $mailerHandler = new NativeMailerHandler(
+            'to@receiver.com',
+            'Example Logger',
+            'from@sender.com',
+            Logger::DEBUG
+        );
+        $this->logger->pushHandler($mailerHandler);
+        */
 
         $this->logger->info("Example logger info.");
         $this->logger->debug("Example logger debug.");
